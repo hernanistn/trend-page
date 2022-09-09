@@ -1,5 +1,5 @@
 import express from "express"
-import { router } from "./Routes"
+import { router } from "./routes"
 
 class Server {
 

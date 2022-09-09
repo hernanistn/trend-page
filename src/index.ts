@@ -1,4 +1,4 @@
-import Server from "./express/Server";
+import Server from "./express/server";
 
 const server = new Server()
 server.initialize()
