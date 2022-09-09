@@ -1,9 +1,7 @@
 
 import express from "express"
 
-
 const app = express()
-const port = 3001
 const router = express.Router()
 router.get("/auth", (req, res) => {
     res.send("code: " + req.query.code)
@@ -16,5 +14,9 @@ router.get("/", (req, res) => {
 
 
 
-app.use(router)
-app.listen(port, () => console.log("Server is nunning on port " + port))
+app.use(`/.netlify/functions/api`, router)
+app.listen(3001, () => {
+    console.log("Running on port 5000.")
+})
+
+module.exports = app
